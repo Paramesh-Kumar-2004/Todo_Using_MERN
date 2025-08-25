@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#UserMain {
+    padding: 14px;
+    min-height: 100vh;
+    min-width: 100%;
+    background-image: url("../Images/Itachi\ 3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+#addButton {
+    border-radius: 14px;
+    padding: 14px;
+    color: white;
+    font-weight: bolder;
+    font-style: italic;
+    background: magenta;
+    background-image: url("../Images/Naruto\ All\ Characters\ Friends\ 2.jpg");
+    background-size: cover;
+    border: 2px solid blueviolet;
+    cursor: pointer;
+}
+
+#User {
+    justify-items: center;
+}
+
+#tableUser {
+    width: 50pc;
+    height: 14pc;
+}
+
+#tableUserTr1 {
+    color: white;
+    text-shadow: 0 0 14px blue;
+    font-size: 20px;
+    font-weight: bolder;
+    background: transparent;
+    box-shadow: inset 0 0 14px 1px skyblue;
+}
+
+.tableUserTh {
+    padding: 4px;
+    height: 4pc;
+    border: 2px solid blue;
+}
+
+#tableUserTr2 {
+    background: transparent;
+}
+
+.tableUserTd {
+    padding: 14px;
+    height: 126px;
+    background: transparent;
+    color: skyblue;
+    box-shadow: inset 0 0 14px 1px skyblue;
+    text-align: center;
+}
