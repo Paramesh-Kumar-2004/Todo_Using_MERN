@@ -22,7 +22,6 @@ function User() {
   async function fetchData() {
     try {
       const response = await getChars();
-      console.log(response)
       setdata(response)
     } catch (error) {
       console.log(error)
