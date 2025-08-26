@@ -63,6 +63,7 @@ function User() {
             <th className='tableUserTh'>Village</th>
             <th className='tableUserTh'>Orgin</th>
             <th className='tableUserTh'>Action</th>
+            <th className='tableUserTh'>Update</th>
           </tr>
 
           {data.map((items) => (
@@ -77,6 +78,7 @@ function User() {
                   deleteChar(items._id)
                 }
               }}>Delete</td>
+              <td className='tableUserTd'>Update</td>
             </tr>
           ))}
 
