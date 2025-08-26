@@ -20,8 +20,8 @@ function AddUser() {
             ...prev,
             [e.target.name]: e.target.value,
         }));
-        console.log("Name ", e.target.name)
-        console.log("Value ", e.target.value)
+        // console.log("Name ", e.target.name)
+        // console.log("Value ", e.target.value)
     }
 
     async function HandleSubmit(e) {
