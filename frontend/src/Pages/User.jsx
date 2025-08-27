@@ -78,7 +78,12 @@ function User() {
                   deleteChar(items._id)
                 }
               }}>Delete</td>
-              <td className='tableUserTd'>Update</td>
+              <td className='tableUserTd'>
+                <Link to={"/updateuser"}>VP</Link>
+              </td>
+              <Link to={"/updateuser"}>
+                <td className='tableUserTd'>Update</td>
+              </Link>
             </tr>
           ))}
 
