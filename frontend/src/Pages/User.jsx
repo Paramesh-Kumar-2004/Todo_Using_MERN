@@ -62,8 +62,8 @@ function User() {
             <th className='tableUserTh'>Nickname</th>
             <th className='tableUserTh'>Village</th>
             <th className='tableUserTh'>Orgin</th>
-            <th className='tableUserTh'>Action</th>
             <th className='tableUserTh'>Update</th>
+            <th className='tableUserTh'>Action</th>
           </tr>
 
           {data.map((items) => (
@@ -72,14 +72,16 @@ function User() {
               <td className='tableUserTd'>{items.nickname}</td>
               <td className='tableUserTd'>{items.village}</td>
               <td className='tableUserTd'>{items.orgin}</td>
-              <td className='tableUserTd' onClick={() => {
-                const confirmDelete = window.confirm(`Are You Sure, You Wat To Delete ${items.name}`)
-                if (confirmDelete) {
-                  deleteChar(items._id)
-                }
-              }}>Delete</td>
               <td className='tableUserTd'>
                 <Link to={"/updateuser"} id='UpdateButton'>Update</Link>
+              </td>
+              <td className='tableUserTd' >
+                <p id='deleteButton' onClick={() => {
+                  const confirmDelete = window.confirm(`Are You Sure, You Wat To Delete ${items.name}`)
+                  if (confirmDelete) {
+                    deleteChar(items._id)
+                  }
+                }}>Delete</p>
               </td>
             </tr>
           ))}
