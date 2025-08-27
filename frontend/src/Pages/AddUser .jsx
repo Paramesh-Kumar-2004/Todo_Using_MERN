@@ -39,6 +39,12 @@ function AddUser() {
 
         <div id='AddUser'>
 
+            <div
+                style={{ display: "flex", justifyContent: "end" }}
+            >
+                <Link to={"/"} ><button id='HomeBtn'>Home</button></Link>
+            </div>
+
             <form onSubmit={HandleSubmit} id='form'>
                 <div id="Name" className="DivGroup">
                     <label className="label">Name :</label><br />
@@ -89,14 +95,6 @@ function AddUser() {
                 </div>
                 <div id='Buttons'>
                     <button type="submit" id='SubmitButton'>Create</button>
-                    <div
-                        style={{ display: "flex", justifyContent: "end" }}
-                    >
-
-                        <Link to={"/"} ><button id='BackBtn'>Back</button></Link>
-                    </div>
-
-
                 </div>
 
             </form>

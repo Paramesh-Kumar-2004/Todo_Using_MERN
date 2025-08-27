@@ -79,7 +79,8 @@ input:focus {
     justify-content: space-around;
 }
 
-#BackBtn {
+#HomeBtn {
+    position: absolute;
     border-radius: 14px;
     padding: 14px;
     color: white;
@@ -89,7 +90,7 @@ input:focus {
     cursor: pointer;
 }
 
-#BackBtn:hover {
+#HomeBtn:hover {
     scale: 1.1;
     background-color: #8E9082;
     transition: 126ms all ease-in-out;
