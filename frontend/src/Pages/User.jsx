@@ -79,11 +79,8 @@ function User() {
                 }
               }}>Delete</td>
               <td className='tableUserTd'>
-                <Link to={"/updateuser"}>VP</Link>
+                <Link to={"/updateuser"} id='UpdateButton'>Update</Link>
               </td>
-              <Link to={"/updateuser"}>
-                <td className='tableUserTd'>Update</td>
-              </Link>
             </tr>
           ))}
 
