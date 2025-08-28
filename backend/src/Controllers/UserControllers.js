@@ -119,7 +119,6 @@ const updateChar = CatchAsyncError(async (req, res, next) => {
             char
         })
 
-
     } catch (error) {
         next(new ErrorHandler(error, 401))
     }
