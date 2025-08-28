@@ -2,10 +2,13 @@ import React, { useState } from "react"
 
 function UpdateUser() {
 
-    // const [Data, setData] = useState({
-    //     name,
+    const [Data, setData] = useState({
+        name: "",
+        nickname: "",
+        village: "",
+        orgin: ""
+    })
 
-    // })
 
     function UpdateUserData() {
 
