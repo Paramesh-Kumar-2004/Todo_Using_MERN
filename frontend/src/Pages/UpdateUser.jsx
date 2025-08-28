@@ -10,8 +10,12 @@ function UpdateUser() {
     })
 
 
-    function UpdateUserData() {
-
+    function UpdateOnchange(e) {
+        setData((prev) => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }))
+        console.log(e.target.value)
     }
 
     function HandleUpdateUser(e) {
@@ -30,7 +34,9 @@ function UpdateUser() {
                             type="text"
                             placeholder="Update Name"
                             required
-                            onChange={UpdateUser}
+                            value={"user.name"}
+                            name="name"
+                            onChange={UpdateOnchange}
                         />
                     </div>
 
