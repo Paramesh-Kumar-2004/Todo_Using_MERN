@@ -1,8 +1,9 @@
 import React, { useState } from "react"
+import { data } from "react-router-dom"
 
 function UpdateUser() {
 
-    const [Data, setData] = useState({
+    const [updateData, setUpdateData] = useState({
         name: "",
         nickname: "",
         village: "",
@@ -11,7 +12,7 @@ function UpdateUser() {
 
 
     function UpdateOnchange(e) {
-        setData((prev) => ({
+        setUpdateData((prev) => ({
             ...prev,
             [e.target.name]: e.target.value
         }))
@@ -34,9 +35,9 @@ function UpdateUser() {
                             type="text"
                             placeholder="Update Name"
                             required
-                            value={"user.name"}
+                            value={updateData.name}
                             name="name"
-                            onChange={UpdateOnchange}
+                            onChange={(e) => { UpdateOnchange(e) }}
                         />
                     </div>
 
