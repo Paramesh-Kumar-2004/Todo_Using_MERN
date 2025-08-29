@@ -6,12 +6,14 @@ import { use } from 'react'
 import { getChars, delChar } from '../API/API_Call'
 
 import "../Styles/User.css"
+import UpdateUser from './UpdateUser'
 
 
 
 function User() {
 
   const [data, setdata] = useState([]);
+  const [updateUserPopup, setUpdateUserPopup] = useState(true)
 
 
   useEffect(() => {
@@ -72,8 +74,8 @@ function User() {
               <td className='tableUserTd'>{items.nickname}</td>
               <td className='tableUserTd'>{items.village}</td>
               <td className='tableUserTd'>{items.orgin}</td>
-              <td className='tableUserTd'>
-                <Link to={"/updateuser"} id='UpdateButton'>Update</Link>
+              <td className='tableUserTd' id='UpdateButton'>
+                Update
               </td>
               <td className='tableUserTd' >
                 <p id='deleteButton' onClick={() => {
@@ -87,9 +89,19 @@ function User() {
           ))}
 
         </table>
+
+        {updateUserPopup && (
+          <div>
+            <UpdateUser />
+          </div>
+        )}
+
+
+
       </div>
     </div>
   )
 }
+
 
 export default User

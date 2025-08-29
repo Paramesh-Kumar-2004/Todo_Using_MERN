@@ -1,5 +1,7 @@
 import React, { useState } from "react"
-import { data } from "react-router-dom"
+import "../Styles/UpdateUser.css"
+
+
 
 function UpdateUser() {
 
@@ -27,7 +29,7 @@ function UpdateUser() {
         <>
             <div id="UpdateUser">
 
-                <form onSubmit={HandleUpdateUser}>
+                <form onSubmit={HandleUpdateUser} id="Updateform">
 
                     <div>
                         <label htmlFor="name">Name :</label>

@@ -11,6 +11,11 @@ async function createChar(data) {
     return response.data
 }
 
+async function getSingleChar(id) {
+    const response = api.get(`/user/${id}`)
+    console.log("Data Get Single Char ", response)
+}
+
 async function getChars() {
     const response = await api.get("/users")
     return response.data.data

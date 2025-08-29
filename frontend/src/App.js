@@ -12,7 +12,6 @@ function App() {
       <Routes>
         <Route path='/' element={<User />} />
         <Route path='/newuser' element={<AddUser />} />
-        <Route path='/updateuser' element={<UpdateUser />} />
       </Routes>
     </BrowserRouter>
   );
