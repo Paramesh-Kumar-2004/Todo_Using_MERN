@@ -1,6 +1,14 @@
 #UpdateUser {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
     position: absolute;
+    display: flex;
     color: red;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 
