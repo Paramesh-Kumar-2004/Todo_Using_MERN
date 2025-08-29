@@ -29,6 +29,37 @@ const addChar = CatchAsyncError(async (req, res, next) => {
 })
 
 
+const getSingleChar = CatchAsyncError(async (req, res, next) => {
+    try {
+        const { id } = req.params;
+
+        if (!id) {
+            res.status(404).json({
+                "id": id,
+                "message": "Id Not Valid"
+            })
+        }
+
+        const user = await User.findById(id)
+        if (!user) {
+            res.status(404).json({
+                "id": id,
+                "message": "Character Not Found For Given ID"
+            })
+        }
+
+        res.status(200).json({
+            "message": "Success",
+            user
+        })
+
+    }
+    catch (error) {
+        next(new ErrorHandler(error, 404))
+    }
+})
+
+
 const getChar = CatchAsyncError(async (req, res, next) => {
     try {
 
@@ -125,5 +156,4 @@ const updateChar = CatchAsyncError(async (req, res, next) => {
 })
 
 
-
-module.exports = { addChar, getChar, delChar, updateChar }
+module.exports = { addChar, getChar, delChar, updateChar, getSingleChar }

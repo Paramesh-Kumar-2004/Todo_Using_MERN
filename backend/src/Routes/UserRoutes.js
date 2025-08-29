@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 
 // Controllers
-const { addChar, getChar, delChar, updateChar } = require("../Controllers/UserControllers")
+const { addChar, getChar, delChar, updateChar, getSingleChar } = require("../Controllers/UserControllers")
 
 
 router.route("/users")
@@ -13,5 +13,7 @@ router.route("/users")
 router.route("/users/:id")
     .put(updateChar)
     .delete(delChar)
+    .get(getSingleChar)
 
 module.exports = router;
+
