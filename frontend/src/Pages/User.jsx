@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import AddUser from './AddUser '
-import { use } from 'react'
+
 
 import { getChars, delChar } from '../API/API_Call'
 
@@ -13,7 +12,7 @@ import UpdateUser from './UpdateUser'
 function User() {
 
   const [data, setdata] = useState([]);
-  const [updateUserPopup, setUpdateUserPopup] = useState(true)
+  const [updateUserPopup, setUpdateUserPopup] = useState(false)
 
 
   useEffect(() => {
@@ -39,6 +38,10 @@ function User() {
     } catch (error) {
       console.log(error)
     }
+  }
+
+  async function HandleUpdateUserPopup() {
+    setUpdateUserPopup(!updateUserPopup)
   }
 
 
@@ -74,8 +77,10 @@ function User() {
               <td className='tableUserTd'>{items.nickname}</td>
               <td className='tableUserTd'>{items.village}</td>
               <td className='tableUserTd'>{items.orgin}</td>
-              <td className='tableUserTd' id='UpdateButton'>
-                Update
+              <td className='tableUserTd'>
+                <p id='UpdateButton'
+                  onClick={() => { HandleUpdateUserPopup() }}
+                >Update</p>
               </td>
               <td className='tableUserTd' >
                 <p id='deleteButton' onClick={() => {
@@ -94,7 +99,11 @@ function User() {
 
       {updateUserPopup && (
         <div>
-          <UpdateUser />
+          <UpdateUser
+          />
+          <p style={{ color: "white" }}
+            onClick={() => { HandleUpdateUserPopup() }}
+          >Close</p>
         </div>
       )}
     </div>

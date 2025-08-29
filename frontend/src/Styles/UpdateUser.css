@@ -7,6 +7,8 @@
     width: 100%;
     position: absolute;
     display: flex;
+    justify-content: center;
+    align-items: center;
     color: red;
     background: rgba(0, 0, 0, 0.4);
 }
