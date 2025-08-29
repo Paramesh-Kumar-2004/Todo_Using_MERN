@@ -1,8 +1,5 @@
 #UpdateUser {
-    height: 100vh;
-    width: 100%;
     position: absolute;
-    background: #000;
     color: red;
 }
 

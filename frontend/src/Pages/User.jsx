@@ -90,15 +90,13 @@ function User() {
 
         </table>
 
-        {updateUserPopup && (
-          <div>
-            <UpdateUser />
-          </div>
-        )}
-
-
-
       </div>
+
+      {updateUserPopup && (
+        <div>
+          <UpdateUser />
+        </div>
+      )}
     </div>
   )
 }
