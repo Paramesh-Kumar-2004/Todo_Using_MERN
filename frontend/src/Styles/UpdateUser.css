@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     color: red;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 
@@ -25,4 +25,9 @@
     border-radius: 14px;
     border: 2px solid #353954;
     box-shadow: inset 0px 0px 14px 1px #353954;
+    
+    background-image: url("../Images/Itachi\ 3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 10px;
 }
