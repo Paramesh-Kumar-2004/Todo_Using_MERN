@@ -3,7 +3,7 @@ import "../Styles/UpdateUser.css"
 
 
 
-function UpdateUser() {
+function UpdateUser({ HandleUpdateUserPopup }) {
 
     const [updateData, setUpdateData] = useState({
         name: "",
@@ -46,6 +46,11 @@ function UpdateUser() {
                 </form>
 
             </div>
+            <button onClick={HandleUpdateUserPopup}
+                style={{
+                    position: "absolute"
+                }}
+            >Close</button>
         </>
     )
 }

@@ -15,7 +15,14 @@
 
 
 #Updateform {
-    height: 100px;
-    width: 200px;
-    background: #000;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 14px;
+    border: 2px solid #353954;
+    box-shadow: inset 0px 0px 14px 1px #353954;
 }

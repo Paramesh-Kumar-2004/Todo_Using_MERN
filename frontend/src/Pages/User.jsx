@@ -12,7 +12,7 @@ import UpdateUser from './UpdateUser'
 function User() {
 
   const [data, setdata] = useState([]);
-  const [updateUserPopup, setUpdateUserPopup] = useState(false)
+  const [updateUserPopup, setUpdateUserPopup] = useState(true)
 
 
   useEffect(() => {
@@ -100,12 +100,15 @@ function User() {
       {updateUserPopup && (
         <div>
           <UpdateUser
+            HandleUpdateUserPopup={HandleUpdateUserPopup}
           />
-          <p style={{ color: "white" }}
+          {/* <p style={{ color: "white" }}
             onClick={() => { HandleUpdateUserPopup() }}
-          >Close</p>
+          >Close</p> */}
         </div>
       )}
+
+
     </div>
   )
 }
