@@ -5,6 +5,7 @@
 }
 
 #UserMain {
+    position: fixed;
     padding: 14px;
     min-height: 100vh;
     min-width: 100%;
