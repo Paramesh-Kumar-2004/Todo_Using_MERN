@@ -36,7 +36,7 @@ const getSingleChar = CatchAsyncError(async (req, res, next) => {
         if (!id) {
             res.status(404).json({
                 "id": id,
-                "message": "Given Id Not Valid"
+                "message": "Given Id Is Not Valid"
             })
         }
 

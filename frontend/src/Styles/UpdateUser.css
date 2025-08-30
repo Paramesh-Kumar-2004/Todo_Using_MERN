@@ -39,11 +39,8 @@
     padding: 14px;
 }
 
-/* .UpdateLabel {
-    font-weight: 500;
-    font-size: large;
-    display: inline-block;
-    color: orang;
-    text-shadow: 0 0 2px gold;
-    padding-bottom: 1px;
-} */
+
+input {
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: greenyellow !important;
+}

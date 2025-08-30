@@ -12,13 +12,13 @@ import UpdateUser from './UpdateUser'
 function User() {
 
   const [data, setdata] = useState([]);
-  const [updateUserPopup, setUpdateUserPopup] = useState(true)
-  const [id, setId] = useState(null)
+  const [updateUserPopup, setUpdateUserPopup] = useState(false)
+  const [Userid, setUserid] = useState(null)
 
 
   useEffect(() => {
     fetchData();
-  }, [])
+  }, [data, updateUserPopup, Userid])
 
 
   async function fetchData() {
@@ -43,8 +43,7 @@ function User() {
 
   async function HandleUpdateUserPopup(id) {
     setUpdateUserPopup(!updateUserPopup)
-    setId(id)
-    console.log(id)
+    setUserid(id)
   }
 
 
@@ -105,7 +104,7 @@ function User() {
           <div>
             <UpdateUser
               HandleUpdateUserPopup={HandleUpdateUserPopup}
-              id={id}
+              Userid={Userid}
             />
           </div>
         )

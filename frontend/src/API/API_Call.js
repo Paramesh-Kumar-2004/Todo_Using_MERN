@@ -12,8 +12,8 @@ async function createChar(data) {
 }
 
 async function getSingleChar(id) {
-    const response = api.get(`/user/${id}`)
-    console.log("Data Get Single Char ", response)
+    const response = await api.get(`/users/${id}`)
+    return response.data
 }
 
 async function getChars() {
@@ -21,9 +21,14 @@ async function getChars() {
     return response.data.data
 }
 
+async function updateChar(id, data) {
+    const response = await api.put(`/users/${id}`, data)
+    return response
+}
+
 async function delChar(id) {
     const response = await api.delete(`/users/${id}`)
     return response.data
 }
 
-export { getChars, delChar, createChar };
+export { getChars, delChar, createChar, getSingleChar, updateChar };
