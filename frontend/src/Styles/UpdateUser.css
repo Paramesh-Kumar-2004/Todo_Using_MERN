@@ -24,10 +24,25 @@
     flex-wrap: wrap;
     border-radius: 14px;
     border: 2px solid #353954;
-    box-shadow: inset 0px 0px 14px 1px #353954;
-    
-    background-image: url("../Images/Itachi\ 3.jpg");
+    box-shadow: inset 0px 0px 14px 1px gray;
+
+    background-image: url("../Images/Akatsuki\ Members\ 11.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 10px;
+    background-position: center;
+}
+
+
+.UpdateDivGroup {
+    width: 100%;
+    padding: 14px;
+}
+
+.UpdateLabel {
+    font-weight: 500;
+    font-size: large;
+    display: inline-block;
+    color: orang;
+    text-shadow: 0 0 2px gold;
+    padding-bottom: 1px;
 }

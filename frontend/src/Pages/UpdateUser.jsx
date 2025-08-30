@@ -31,15 +31,51 @@ function UpdateUser({ HandleUpdateUserPopup }) {
 
                 <form onSubmit={HandleUpdateUser} id="Updateform">
 
-                    <div>
-                        <label htmlFor="name">Name :</label>
+                    <div id="Name" className="UpdateDivGroup">
+                        <label className="UpdateLabel">Name :</label><br />
                         <input
                             type="text"
-                            placeholder="Update Name"
-                            required
-                            value={updateData.name}
                             name="name"
-                            onChange={(e) => { UpdateOnchange(e) }}
+                            placeholder="Enter Your Name"
+                            // value={data.name}
+                            // onChange={(e) => { handleOnChange(e) }}
+                            required
+                        />
+                    </div>
+
+                    <div className="UpdateDivGroup">
+                        <label className='UpdateLabel'>Nick Name : </label><br />
+                        <input
+                            type="text"
+                            name='nickname'
+                            // value={data.nickname}
+                            placeholder='Enter The Nick Name'
+                            // onChange={(e) => { handleOnChange(e) }}
+                            required
+                        />
+                    </div>
+
+                    <div className="UpdateDivGroup">
+                        <label className='UpdateLabel'>Village : </label><br />
+                        <input
+                            type="text"
+                            name='village'
+                            // value={data.village}
+                            placeholder='Enter The Village'
+                            // onChange={(e) => { handleOnChange(e) }}
+                            required
+                        />
+                    </div>
+
+                    <div className="UpdateDivGroup">
+                        <label className='UpdateLabel'>Orgin : </label><br />
+                        <input
+                            type="text"
+                            name='orgin'
+                            // value={data.orgin}
+                            placeholder='Enter The Orgin'
+                            // onChange={(e) => { handleOnChange(e) }}
+                            required
                         />
                     </div>
 
