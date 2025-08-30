@@ -56,6 +56,7 @@ function UpdateUser({ HandleUpdateUserPopup, Userid }) {
         <>
             <div id="UpdateUser">
 
+
                 <form onSubmit={HandleUpdateUser} id="Updateform">
 
                     <div id="Name" className="DivGroup">
@@ -96,16 +97,16 @@ function UpdateUser({ HandleUpdateUserPopup, Userid }) {
 
                     <div id='Buttons'>
                         <button type="submit" id='SubmitButton'>Update</button>
+
+                        <button onClick={HandleUpdateUserPopup}
+                            id="CloseButton"
+                        >Close</button>
                     </div>
+
 
                 </form>
 
             </div>
-            <button onClick={HandleUpdateUserPopup}
-                style={{
-                    position: "absolute"
-                }}
-            >Close</button>
         </>
     )
 }
