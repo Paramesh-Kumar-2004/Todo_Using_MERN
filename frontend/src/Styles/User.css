@@ -11,8 +11,10 @@
     background-image: url("../Images/Itachi\ 3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
+    padding-bottom: 26px;
 }
 
 #addButton {

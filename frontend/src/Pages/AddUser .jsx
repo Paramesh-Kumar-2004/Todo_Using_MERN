@@ -29,6 +29,12 @@ function AddUser() {
         try {
             const result = await createChar(data)
             alert(result.message)
+            setData({
+                name: "",
+                nickname: "",
+                village: "",
+                orgin: ""
+            })
         } catch (error) {
             console.log(error)
         }
