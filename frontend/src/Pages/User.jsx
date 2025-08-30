@@ -12,7 +12,7 @@ import UpdateUser from './UpdateUser'
 function User() {
 
   const [data, setdata] = useState([]);
-  const [updateUserPopup, setUpdateUserPopup] = useState(true)
+  const [updateUserPopup, setUpdateUserPopup] = useState(false)
   const [Userid, setUserid] = useState(null)
 
 
