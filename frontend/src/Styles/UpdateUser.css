@@ -27,6 +27,7 @@
     box-shadow: inset 0px 0px 14px 1px gray;
 
     background-image: url("../Images/Akatsuki\ Members\ 11.jpg");
+    background-image: url("../Images/Obito\ 5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,11 +39,11 @@
     padding: 14px;
 }
 
-.UpdateLabel {
+/* .UpdateLabel {
     font-weight: 500;
     font-size: large;
     display: inline-block;
     color: orang;
     text-shadow: 0 0 2px gold;
     padding-bottom: 1px;
-}
+} */

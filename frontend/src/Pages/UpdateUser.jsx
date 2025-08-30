@@ -3,15 +3,14 @@ import "../Styles/UpdateUser.css"
 
 
 
-function UpdateUser({ HandleUpdateUserPopup }) {
+function UpdateUser({ HandleUpdateUserPopup, id }) {
 
     const [updateData, setUpdateData] = useState({
-        name: "",
+        name: "tes",
         nickname: "",
         village: "",
         orgin: ""
     })
-
 
     function UpdateOnchange(e) {
         setUpdateData((prev) => ({
@@ -25,58 +24,63 @@ function UpdateUser({ HandleUpdateUserPopup }) {
         console.log(e.target.value)
     }
 
+
     return (
         <>
             <div id="UpdateUser">
 
                 <form onSubmit={HandleUpdateUser} id="Updateform">
 
-                    <div id="Name" className="UpdateDivGroup">
-                        <label className="UpdateLabel">Name :</label><br />
+                    <div id="Name" className="DivGroup">
+                        <label className="label">Name :</label><br />
                         <input
                             type="text"
                             name="name"
                             placeholder="Enter Your Name"
-                            // value={data.name}
-                            // onChange={(e) => { handleOnChange(e) }}
+                            value={updateData.name}
+                            onChange={(e) => { UpdateOnchange(e) }}
                             required
                         />
                     </div>
 
-                    <div className="UpdateDivGroup">
-                        <label className='UpdateLabel'>Nick Name : </label><br />
+                    <div className="DivGroup">
+                        <label className='label'>Nick Name : </label><br />
                         <input
                             type="text"
                             name='nickname'
-                            // value={data.nickname}
+                            value={updateData.nickname}
                             placeholder='Enter The Nick Name'
-                            // onChange={(e) => { handleOnChange(e) }}
+                            onChange={(e) => { UpdateOnchange(e) }}
                             required
                         />
                     </div>
 
-                    <div className="UpdateDivGroup">
-                        <label className='UpdateLabel'>Village : </label><br />
+                    <div className="DivGroup">
+                        <label className='label'>Village : </label><br />
                         <input
                             type="text"
                             name='village'
-                            // value={data.village}
+                            value={updateData.village}
                             placeholder='Enter The Village'
-                            // onChange={(e) => { handleOnChange(e) }}
+                            onChange={(e) => { UpdateOnchange(e) }}
                             required
                         />
                     </div>
 
-                    <div className="UpdateDivGroup">
-                        <label className='UpdateLabel'>Orgin : </label><br />
+                    <div className="DivGroup">
+                        <label className='label'>Orgin : </label><br />
                         <input
                             type="text"
                             name='orgin'
-                            // value={data.orgin}
+                            value={updateData.orgin}
                             placeholder='Enter The Orgin'
-                            // onChange={(e) => { handleOnChange(e) }}
+                            onChange={(e) => { UpdateOnchange(e) }}
                             required
                         />
+                    </div>
+
+                    <div id='Buttons'>
+                        <button type="submit" id='SubmitButton'>Update</button>
                     </div>
 
                 </form>

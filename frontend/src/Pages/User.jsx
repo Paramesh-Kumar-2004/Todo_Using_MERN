@@ -13,6 +13,7 @@ function User() {
 
   const [data, setdata] = useState([]);
   const [updateUserPopup, setUpdateUserPopup] = useState(true)
+  const [id, setId] = useState(null)
 
 
   useEffect(() => {
@@ -40,8 +41,10 @@ function User() {
     }
   }
 
-  async function HandleUpdateUserPopup() {
+  async function HandleUpdateUserPopup(id) {
     setUpdateUserPopup(!updateUserPopup)
+    setId(id)
+    console.log(id)
   }
 
 
@@ -79,7 +82,7 @@ function User() {
               <td className='tableUserTd'>{items.orgin}</td>
               <td className='tableUserTd'>
                 <p id='UpdateButton'
-                  onClick={() => { HandleUpdateUserPopup() }}
+                  onClick={() => { HandleUpdateUserPopup(items._id) }}
                 >Update</p>
               </td>
               <td className='tableUserTd' >
@@ -97,19 +100,19 @@ function User() {
 
       </div>
 
-      {updateUserPopup && (
-        <div>
-          <UpdateUser
-            HandleUpdateUserPopup={HandleUpdateUserPopup}
-          />
-          {/* <p style={{ color: "white" }}
-            onClick={() => { HandleUpdateUserPopup() }}
-          >Close</p> */}
-        </div>
-      )}
+      {
+        updateUserPopup && (
+          <div>
+            <UpdateUser
+              HandleUpdateUserPopup={HandleUpdateUserPopup}
+              id={id}
+            />
+          </div>
+        )
+      }
 
 
-    </div>
+    </div >
   )
 }
 
