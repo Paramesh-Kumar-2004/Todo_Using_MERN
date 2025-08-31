@@ -32,11 +32,13 @@
 }
 
 #User {
+    background: salmon;
     justify-items: center;
+    height: 500px;
+    overflow-y: scroll;
 }
 
 #tableUser {
-    background: salmon;
     width: 80%;
     height: 14pc;
 }
