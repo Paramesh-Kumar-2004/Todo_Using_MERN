@@ -62,9 +62,9 @@ function User() {
 
       <div id='User'>
 
-        <table id='tableUser'>
+        <table id='table'>
 
-          <tr id='tableUserTr1'>
+          <tr id='tableHead'>
             <th className='tableUserTh'>Name</th>
             <th className='tableUserTh'>Nickname</th>
             <th className='tableUserTh'>Village</th>
@@ -74,7 +74,7 @@ function User() {
           </tr>
 
           {data.map((items) => (
-            <tr key={items.nickname} id='tableUserTr2'>
+            <tr key={items.nickname} id='tableBody'>
               <td className='tableUserTd'>{items.name}</td>
               <td className='tableUserTd'>{items.nickname}</td>
               <td className='tableUserTd'>{items.village}</td>

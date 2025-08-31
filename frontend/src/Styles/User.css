@@ -38,18 +38,20 @@
     scrollbar-width: none;
 }
 
-#tableUser {
+#table {
     width: 80%;
-    height: 14pc;
 }
 
-#tableUserTr1 {
+#tableHead {
     color: white;
     text-shadow: 0 0 14px blue;
     font-size: 20px;
     font-weight: bolder;
     background: transparent;
     box-shadow: inset 0 0 14px 1px skyblue;
+    background: rgba(135, 207, 235, 0.5);
+    top: 0;
+    position: sticky;
 }
 
 .tableUserTh {
@@ -58,13 +60,13 @@
     border: 2px solid blue;
 }
 
-#tableUserTr2 {
+#tableBody {
     background: transparent;
 }
 
 .tableUserTd {
     padding: 14px;
-    height: 126px;
+    height: 80px;
     background: transparent;
     color: lightblue;
     box-shadow: inset 0 0 14px 1px skyblue;
