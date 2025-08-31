@@ -8,6 +8,7 @@
     padding: 14px;
     min-height: 100vh;
     min-width: 100%;
+    position: fixed;
     background-image: url("../Images/Itachi\ 3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -35,7 +36,7 @@
 }
 
 #tableUser {
-    /* background: pink; */
+    background: salmon;
     width: 80%;
     height: 14pc;
 }
