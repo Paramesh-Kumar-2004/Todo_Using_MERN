@@ -24,7 +24,7 @@ function User() {
   async function fetchData() {
     try {
       const response = await getChars();
-      setdata(response)
+      setdata(response.data)
     } catch (error) {
       console.log(error)
     }
@@ -65,6 +65,7 @@ function User() {
         <table id='table'>
 
           <tr id='tableHead'>
+            <th className='tableUserTh'>No</th>
             <th className='tableUserTh'>Name</th>
             <th className='tableUserTh'>Nickname</th>
             <th className='tableUserTh'>Village</th>
@@ -75,6 +76,7 @@ function User() {
 
           {data.map((items) => (
             <tr key={items.nickname} id='tableBody'>
+              <td className='tableUserTd'></td>
               <td className='tableUserTd'>{items.name}</td>
               <td className='tableUserTd'>{items.nickname}</td>
               <td className='tableUserTd'>{items.village}</td>

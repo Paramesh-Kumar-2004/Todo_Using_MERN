@@ -18,7 +18,7 @@ async function getSingleChar(id) {
 
 async function getChars() {
     const response = await api.get("/users")
-    return response.data.data
+    return response.data
 }
 
 async function updateChar(id, data) {
