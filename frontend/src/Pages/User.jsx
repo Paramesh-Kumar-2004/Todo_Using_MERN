@@ -18,7 +18,7 @@ function User() {
 
   useEffect(() => {
     fetchData();
-  }, [data, updateUserPopup, Userid])
+  }, [updateUserPopup, Userid])
 
 
   async function fetchData() {
@@ -65,7 +65,6 @@ function User() {
         <table id='table'>
 
           <tr id='tableHead'>
-            <th className='tableUserTh'>No</th>
             <th className='tableUserTh'>Name</th>
             <th className='tableUserTh'>Nickname</th>
             <th className='tableUserTh'>Village</th>
@@ -76,7 +75,6 @@ function User() {
 
           {data.map((items) => (
             <tr key={items.nickname} id='tableBody'>
-              <td className='tableUserTd'></td>
               <td className='tableUserTd'>{items.name}</td>
               <td className='tableUserTd'>{items.nickname}</td>
               <td className='tableUserTd'>{items.village}</td>
