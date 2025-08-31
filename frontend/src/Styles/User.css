@@ -32,9 +32,8 @@
 }
 
 #User {
-    background: salmon;
     justify-items: center;
-    height: 500px;
+    height: 90vh;
     overflow-y: scroll;
 }
 
