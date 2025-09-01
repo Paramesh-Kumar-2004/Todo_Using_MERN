@@ -79,7 +79,6 @@ const getChar = CatchAsyncError(async (req, res, next) => {
                 "message": "Character Found Successfully",
                 "data": characters
             })
-
         }
 
 
@@ -154,6 +153,7 @@ const updateChar = CatchAsyncError(async (req, res, next) => {
         next(new ErrorHandler(error, 401))
     }
 })
+
 
 
 module.exports = { addChar, getChar, delChar, updateChar, getSingleChar }
