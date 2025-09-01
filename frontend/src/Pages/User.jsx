@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 import { getChars, delChar } from '../API/API_Call'
@@ -44,6 +44,7 @@ function User() {
   async function HandleUpdateUserPopup(id) {
     setUpdateUserPopup(!updateUserPopup)
     setUserid(id)
+    console.log(updateUserPopup)
   }
 
 
@@ -64,36 +65,41 @@ function User() {
 
         <table id='table'>
 
-          <tr id='tableHead'>
-            <th className='tableUserTh'>Name</th>
-            <th className='tableUserTh'>Nickname</th>
-            <th className='tableUserTh'>Village</th>
-            <th className='tableUserTh'>Orgin</th>
-            <th className='tableUserTh'>Update</th>
-            <th className='tableUserTh'>Action</th>
-          </tr>
-
-          {data.map((items) => (
-            <tr key={items.nickname} id='tableBody'>
-              <td className='tableUserTd'>{items.name}</td>
-              <td className='tableUserTd'>{items.nickname}</td>
-              <td className='tableUserTd'>{items.village}</td>
-              <td className='tableUserTd'>{items.orgin}</td>
-              <td className='tableUserTd'>
-                <p id='UpdateButton'
-                  onClick={() => { HandleUpdateUserPopup(items._id) }}
-                >Update</p>
-              </td>
-              <td className='tableUserTd' >
-                <p id='deleteButton' onClick={() => {
-                  const confirmDelete = window.confirm(`Are You Sure, You Wat To Delete ${items.name}`)
-                  if (confirmDelete) {
-                    deleteChar(items._id)
-                  }
-                }}>Delete</p>
-              </td>
+          <thead>
+            <tr id='tableHead'>
+              <th className='tableUserTh'>Name</th>
+              <th className='tableUserTh'>Nickname</th>
+              <th className='tableUserTh'>Village</th>
+              <th className='tableUserTh'>Orgin</th>
+              <th className='tableUserTh'>Update</th>
+              <th className='tableUserTh'>Action</th>
             </tr>
-          ))}
+          </thead>
+
+          <tbody>
+            {data.map((items) => (
+
+              <tr key={items.nickname} id='tableBody'>
+                <td className='tableUserTd'>{items.name}</td>
+                <td className='tableUserTd'>{items.nickname}</td>
+                <td className='tableUserTd'>{items.village}</td>
+                <td className='tableUserTd'>{items.orgin}</td>
+                <td className='tableUserTd'>
+                  <p id='UpdateButton'
+                    onClick={() => { HandleUpdateUserPopup(items._id) }}
+                  >Update</p>
+                </td>
+                <td className='tableUserTd' >
+                  <p id='deleteButton' onClick={() => {
+                    const confirmDelete = window.confirm(`Are You Sure, You Wat To Delete ${items.name}`)
+                    if (confirmDelete) {
+                      deleteChar(items._id)
+                    }
+                  }}>Delete</p>
+                </td>
+              </tr>
+            ))}
+          </tbody>
 
         </table>
 
