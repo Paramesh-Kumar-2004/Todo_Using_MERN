@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "../Styles/UpdateUser.css"
-import { getChars, getSingleChar, updateChar } from "../API/API_Call"
-import { data } from "react-router-dom"
+import { getSingleChar, updateChar } from "../API/API_Call"
 
 
 
