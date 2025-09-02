@@ -81,6 +81,12 @@
     cursor: pointer;
 }
 
+#deleteButton:hover {
+    scale: 1.2;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 0 0 14px maroon;
+}
+
 #UpdateButton {
     cursor: pointer;
     text-decoration: none;
