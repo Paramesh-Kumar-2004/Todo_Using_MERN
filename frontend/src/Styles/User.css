@@ -79,6 +79,7 @@
 
 #deleteButton {
     color: red;
+    text-shadow: 0 0 14px red;
     cursor: pointer;
 }
 
