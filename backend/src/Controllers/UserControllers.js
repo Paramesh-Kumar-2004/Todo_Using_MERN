@@ -63,24 +63,23 @@ const getSingleChar = CatchAsyncError(async (req, res, next) => {
 const getChar = CatchAsyncError(async (req, res, next) => {
     try {
 
-        const { id } = req.query;
+        // const { id } = req.query;
 
-        if (id) {
-            const characters = await User.findById(id)
+        // if (id) {
+        //     const characters = await User.findById(id)
 
-            if (!characters) {
-                return res.status(200).json({
-                    "id": id,
-                    "message": "Character Not Found For Given id",
-                })
-            }
+        //     if (!characters) {
+        //         return res.status(200).json({
+        //             "id": id,
+        //             "message": "Character Not Found For Given id",
+        //         })
+        //     }
 
-            return res.status(200).json({
-                "message": "Character Found Successfully",
-                "data": characters
-            })
-        }
-
+        //     return res.status(200).json({
+        //         "message": "Character Found Successfully",
+        //         "data": characters
+        //     })
+        // }
 
         const characters = await User.find().select("+name")
 
