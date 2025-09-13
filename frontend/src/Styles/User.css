@@ -24,8 +24,8 @@
     font-weight: bolder;
     font-style: italic;
     color: pink;
-    /* background-image: url("../Images/Naruto\ All\ Characters\ Friends\ 2.jpg"); */
-    background: linear-gradient(skyblue,60%, blue);
+    background-image: url("../Images/Naruto\ All\ Characters\ Friends\ 2.jpg");
+    /* background: linear-gradient(skyblue,60%, blue); */
     background-size: cover;
     border: 2px solid cyan;
     cursor: pointer;
